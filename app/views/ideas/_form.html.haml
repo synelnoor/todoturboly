@@ -1,0 +1,20 @@
+= form_with(model: idea, local: true) do |form|
+  - if idea.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(idea.errors.count, "error")
+        prohibited this idea from being saved:
+      %ul
+        - idea.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = form.label :name
+    = form.text_field :name
+  .field
+    = form.label :description
+    = form.text_area :description
+  .field
+    = form.label :picture
+    = form.file_field :picture
+  .actions
+    = form.submit

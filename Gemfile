@@ -11,6 +11,11 @@ gem 'mysql2', '>= 0.4.4', '< 0.6.0'
 gem 'carrierwave'
 #auth
 gem 'devise'
+#haml UI
+gem 'haml-rails', '>= 0.3.4', :group => :development
+#erb convert
+gem "erb2haml", :group => :development
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
